@@ -15,21 +15,18 @@ async function GetNews() {
                 try {
                     show.innerHTML += `
         <div class="card">
-        <div class="card-body">
+            <div class="card-body">
             <h2>${response.articles[i].title}</h2>
             <h3>${response.articles[i].author}</h3>
             <h4>${response.articles[i].description}</h4>
-            <H5><button>${response.articles[i].url}</button>
-            <h4>
-
-            </div>  
+            </div>
         </div>
         `
-                }
-                catch (err) {
-                    console.log(err)
-                }
-            }
+        }
+        catch(err){
+            console.log(err)
+        }
+    }
 
         })
 }
