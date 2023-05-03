@@ -1,21 +1,19 @@
-async function GetNews(){
+async function GetNews() {
 
-            // let search = document.get
+    await fetch('https://newsapi.org/v2/everything?q="sports"&apiKey=ef2320f48834438fb872ab95e0f3d780')
 
-await fetch('https://newsapi.org/v2/everything?q="KANYEwest"&apiKey=ef2320f48834438fb872ab95e0f3d780')
+        .then(d => d.json())
+        .then(response => {
 
-.then(d => d.json())
-.then(response  => {
+            let limit = response.articles.splice(0, 11)
+            console.log(limit)
+            for (var i = 0; i <= limit.length - 1; i++) {
+                console.log(limit.title)
 
-    let limit = response.articles.splice(0,11)
-    console.log(limit)
-    for (var i = 0; i <= limit.length -1; i++){
-        console.log(limit.title)
+                let show = document.getElementById("showing");
 
-        let show = document.getElementById("showing");
-
-        try {
-        show.innerHTML += `
+                try {
+                    show.innerHTML += `
         <div class="card">
         <div class="card-body">
             <h2>${response.articles[i].title}</h2>
@@ -24,15 +22,16 @@ await fetch('https://newsapi.org/v2/everything?q="KANYEwest"&apiKey=ef2320f48834
             <H5><button>${response.articles[i].url}</button>
             <h4>
 
-            </div>
+            </div>  
         </div>
         `
-        }
-        catch(err){
-            console.log(err)
-        }
-    }
+                }
+                catch (err) {
+                    console.log(err)
+                }
+            }
 
-}) 
-} 
+        })
+}
 GetNews()
+
