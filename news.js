@@ -16,9 +16,10 @@ await fetch('https://newsapi.org/v2/everything?q=keyword&apiKey=ef2320f48834438f
         show.innerHTML += `
         <div class="card">
             <div class="card-body">
+            <img src =${response.articles[i].urlToImage} class = "images">
             <h2>${response.articles[i].title}</h2>
-            <h3>${response.articles[i].author}</h3>
-            <h4>${response.articles[i].description}</h4>
+            <h5>${response.articles[i].author}</h5>
+            <p>${response.articles[i].description}</p>
             </div>
         </div>
         `
@@ -27,6 +28,9 @@ await fetch('https://newsapi.org/v2/everything?q=keyword&apiKey=ef2320f48834438f
             console.log(err)
         }
     }
+function imgClick(){
+    
+}
 
 }) 
 } 
