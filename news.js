@@ -1,6 +1,6 @@
 async function GetNews() {
 
-    await fetch('https://newsapi.org/v2/everything?q="sports"&apiKey=ef2320f48834438fb872ab95e0f3d780')
+    await fetch('https://newsapi.org/v2/everything?q="sports"&apiKey=c344e5ff138541a2915af354552729e1')
 
         .then(d => d.json())
         .then(response => {
@@ -14,7 +14,7 @@ async function GetNews() {
 
         try {
         show.innerHTML += `
-        <div class="card mt-2">
+        <div class="card mt-3">
             <div class="card-body">
             <img src=${response.articles[i].urlToImage} class="images">
             <h2>${response.articles[i].title}</h2>
