@@ -1,4 +1,49 @@
-        *{
+*{
+<<<<<<< HEAD
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.card{
+    display: flex;
+    box-shadow: inset;
+    width: 50rem;
+    margin: auto;
+    text-align: left;
+    
+}
+
+h2{
+    size: 100px;
+    color: black;
+}
+
+h3{
+    font-size: medium;
+    font-style: italic;
+    color: brown;
+}
+
+p{
+    font-size: small;
+    
+}
+
+/* .btn btn-outline-primary{
+    size: 10px;
+    background-color: black;
+} */
+
+.images{
+    width: 250px;
+     /* height: 550px;  */
+    float: right;
+    object-fit: cover;
+    /* object-position: 50% 50%; */
+
+=======
     padding: 0;
     border: 0;
     box-sizing: border-box;
@@ -6,4 +51,5 @@
 
 .images{
     width: 200px;
+>>>>>>> 5029ba846c00d04f9f20856aa549f240b03ab209
 }
