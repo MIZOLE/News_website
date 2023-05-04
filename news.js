@@ -14,11 +14,12 @@ await fetch('https://newsapi.org/v2/everything?q=keyword&apiKey=ef2320f48834438f
 
         try {
         show.innerHTML += `
-        <div class="card">
+        <div class="card mt-2">
             <div class="card-body">
+            <img src=${response.articles[i].urlToImage} class="images">
             <h2>${response.articles[i].title}</h2>
             <h3>${response.articles[i].author}</h3>
-            <h4>${response.articles[i].description}</h4>
+            <p>${response.articles[i].description}</p>
             </div>
         </div>
         `
