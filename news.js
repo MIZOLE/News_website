@@ -1,14 +1,14 @@
-async function GetNews() {
+async function GetSports() {
 
-    await fetch('https://newsapi.org/v2/everything?q="Music"&apiKey=ef2320f48834438fb872ab95e0f3d780')
+    await fetch('https://newsapi.org/v2/everything?q="sport"&apiKey=ef2320f48834438fb872ab95e0f3d780')
 
         .then(d => d.json())
         .then(response => {
 
-            let first_limit = response.articles.splice(0, 11)
-            console.log(first_limit)
-            for (var i = 0; i <= first_limit.length - 1; i++) {
-                console.log(first_limit.title)
+            let limit = response.articles.splice(0, 20)
+            console.log(limit)
+            for (var i = 0; i <= limit.length - 1; i++) {
+                console.log(limit.title)
 
                 let show = document.getElementById("showing");
 
@@ -16,16 +16,13 @@ async function GetNews() {
                     show.innerHTML += `
 
         <div class="card">
-        try {
-        show.innerHTML += `
-        <div class="card mt-2">
             <div class="card-body">
             <img src=${response.articles[i].urlToImage} class="images">
             <h2>${response.articles[i].title}</h2>
             <h3>${response.articles[i].author}</h3>
             <p>${response.articles[i].description}</p>
-            <p>${response.articles[i].publishedAt}</p>  
-            <p>${response.articles[i].description}</p>
+            <p>${response.articles[i].publishedAt}</p>
+            <a href=${response.articles[i].url}>Read more</a>            
             </div>
         </div>
         `
@@ -37,78 +34,80 @@ async function GetNews() {
 
         })
 }
-GetNews()
+GetSports()
 
-//Function to get Entertainment news from the api
+async function GetTech() {
 
-// async function GetEntNews() {
+    await fetch('https://newsapi.org/v2/everything?q="tech"&apiKey=ef2320f48834438fb872ab95e0f3d780')
 
-//     await fetch('https://newsapi.org/v2/everything?q="entertainment"&apiKey=ef2320f48834438fb872ab95e0f3d780')
+        .then(d => d.json())
+        .then(response => {
 
-//         .then(d => d.json())
-//         .then(response => {
+            let limit1 = response.articles.splice(0, 15)
+            console.log(limit1)
+            for (var i = 0; i <= limit1.length - 1; i++) {
+                console.log(limit1.title)
 
-//             let second_limit = response.articles.splice(0, 11)
-//             console.log(second_limit)
-//             for (var i = 0; i <= second_limit.length - 1; i++) {
-//                 console.log(second_limit.title)
+                let show = document.getElementById("showing1");
 
-//                 let show = document.getElementById("showing2");
+                try {
+                    show.innerHTML += `
 
-//                 try {
-//                     show.innerHTML += `
+        <div class="card">
+            <div class="card-body">
+            <img src=${response.articles[i].urlToImage} class="images">
+            <h2>${response.articles[i].title}</h2>
+            <h3>${response.articles[i].author}</h3>
+            <p>${response.articles[i].description}</p>
+            <p>${response.articles[i].publishedAt}</p>
+            <a href=${response.articles[i].url}>Read more</a>
+            </div>
+        </div>
+        `
+        }
+        catch(err){
+            console.log(err)
+        }
+    }
 
-//         <div class="card">
-//             <div class="card-body">
-//             <h2>${response.articles[i].title}</h2>
-//             <h3>${response.articles[i].author}</h3>
-//             <p>${response.articles[i].description}</p>
-//             </div>
-//         </div>
-//         `
-//         }
-//         catch(err){
-//             console.log(err)
-//         }
-//     }
+        })
+}
+GetTech ()
 
-//         })
-// }
-// GetEntNews()
+async function GetBusiNews() {
 
-//Function to get tech news from the api
+    await fetch('https://newsapi.org/v2/everything?q="Businesses"&apiKey=ef2320f48834438fb872ab95e0f3d780')
 
-// async function GetEntNews() {
+        .then(d => d.json())
+        .then(response => {
 
-//     await fetch('https://newsapi.org/v2/everything?q="entertainment"&apiKey=ef2320f48834438fb872ab95e0f3d780')
+            let limit2 = response.articles.splice(0, 20)
+            console.log(limit2)
+            for (var i = 0; i <= limit2.length - 1; i++) {
+                console.log(limit2.title)
 
-//         .then(d => d.json())
-//         .then(response => {
+                let show = document.getElementById("showing3");
 
-//             let third_limit = response.articles.splice(0, 11)
-//             console.log(third_limit)
-//             for (var i = 0; i <= third_limit.length - 1; i++) {
-//                 console.log(third_limit.title)
+                try {
+                    show.innerHTML += `
 
-//                 let show = document.getElementById("showing3");
+        <div class="card">
+            <div class="card-body">
+            <img src=${response.articles[i].urlToImage} class="images">
+            <h2>${response.articles[i].title}</h2>
+            <h3>${response.articles[i].author}</h3>
+            <p>${response.articles[i].description}</p>
+            <p>${response.articles[i].publishedAt}</p>
+            <a href=${response.articles[i].url}>Read more</a>   
+            </div>
+        </div>
+        `
+        }
+        catch(err){
+            console.log(err)
+        }
+    }
 
-//                 try {
-//                     show.innerHTML += `
-
-//         <div class="card">
-//             <div class="card-body">
-//             <h2>${response.articles[i].title}</h2>
-//             <h3>${response.articles[i].author}</h3>
-//             <p>${response.articles[i].description}</p>
-//             </div>
-//         </div>
-//         `
-//         }
-//         catch(err){
-//             console.log(err)
-//         }
-//     }
-
-//         })
-// }
-// GetEntNews()
+        })
+}
+GetBusiNews()

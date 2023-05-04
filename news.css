@@ -1,5 +1,4 @@
 *{
-<<<<<<< HEAD
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -42,14 +41,8 @@ p{
     float: right;
     object-fit: cover;
     /* object-position: 50% 50%; */
-
-=======
-    padding: 0;
-    border: 0;
-    box-sizing: border-box;
 }
 
-.images{
+.images {
     width: 200px;
->>>>>>> 5029ba846c00d04f9f20856aa549f240b03ab209
 }
