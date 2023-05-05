@@ -19,6 +19,7 @@ searchBar()
 async function GetSports() {
 
     await fetch('https://newsapi.org/v2/everything?q="sports"&apiKey=c344e5ff138541a2915af354552729e1')
+    await fetch('https://newsapi.org/v2/everything?q="sports"&apiKey=c344e5ff138541a2915af354552729e1')
 
         .then(d => d.json())
         .then(response => {
@@ -33,7 +34,8 @@ async function GetSports() {
                 try {
                     show.innerHTML += `
 
-        <div class="card">
+        
+            <div class="card mt-3">
             <div class="card-body">
             <img src=${response.articles[i].urlToImage} class="images">
             <h2>${response.articles[i].title}</h2>
@@ -57,6 +59,7 @@ GetSports()
 async function GetTech() {
 
     await fetch('https://newsapi.org/v2/everything?q="tech"&apiKey=c344e5ff138541a2915af354552729e1')
+    await fetch('https://newsapi.org/v2/everything?q="tech"&apiKey=c344e5ff138541a2915af354552729e1')
 
         .then(d => d.json())
         .then(response => {
@@ -72,6 +75,9 @@ async function GetTech() {
                     show.innerHTML += `
 
         <div class="card">
+        try {
+        show.innerHTML += `
+        <div class="card mt-3">
             <div class="card-body">
             <img src=${response.articles[i].urlToImage} class="images">
             <h2>${response.articles[i].title}</h2>
