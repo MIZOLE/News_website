@@ -1,14 +1,32 @@
+function searchBar(query) {
+    searchUrl = `https://newsapi.org/v2/everything?q=${query}&apiKey=c344e5ff138541a2915af354552729e1`
+    
+    fetch(searchUrl)
+        .then(res => res.json())
+        .then((jsondata) => {
+            console.log(jsondata)
+        })
+    window.onload = () => {
+        let searchFieldElement = document.getElementById("searching");
+        searchFieldElement.onkeyup = (event) => {
+            searchBar(searchFieldElement.value)
+        }
+    }
+}
+searchBar()
+
+
 async function GetSports() {
 
-    await fetch('https://newsapi.org/v2/everything?q="sport"&apiKey=ef2320f48834438fb872ab95e0f3d780')
+    await fetch('https://newsapi.org/v2/everything?q="sports"&apiKey=c344e5ff138541a2915af354552729e1')
 
         .then(d => d.json())
         .then(response => {
 
-            let limit = response.articles.splice(0, 20)
-            console.log(limit)
+            let limit = response.articles.splice(0, 15)
+            // console.log(limit)
             for (var i = 0; i <= limit.length - 1; i++) {
-                console.log(limit.title)
+                // console.log(limit.title)
 
                 let show = document.getElementById("showing");
 
@@ -26,11 +44,11 @@ async function GetSports() {
             </div>
         </div>
         `
-        }
-        catch(err){
-            console.log(err)
-        }
-    }
+                }
+                catch (err) {
+                    // console.log(err)
+                }
+            }
 
         })
 }
@@ -38,15 +56,15 @@ GetSports()
 
 async function GetTech() {
 
-    await fetch('https://newsapi.org/v2/everything?q="tech"&apiKey=ef2320f48834438fb872ab95e0f3d780')
+    await fetch('https://newsapi.org/v2/everything?q="tech"&apiKey=c344e5ff138541a2915af354552729e1')
 
         .then(d => d.json())
         .then(response => {
 
             let limit1 = response.articles.splice(0, 15)
-            console.log(limit1)
+            // console.log(limit1)
             for (var i = 0; i <= limit1.length - 1; i++) {
-                console.log(limit1.title)
+                // console.log(limit1.title)
 
                 let show = document.getElementById("showing1");
 
@@ -64,27 +82,27 @@ async function GetTech() {
             </div>
         </div>
         `
-        }
-        catch(err){
-            console.log(err)
-        }
-    }
+                }
+                catch (err) {
+                    // console.log(err)
+                }
+            }
 
         })
 }
-GetTech ()
+GetTech()
 
 async function GetBusiNews() {
 
-    await fetch('https://newsapi.org/v2/everything?q="Businesses"&apiKey=ef2320f48834438fb872ab95e0f3d780')
+    await fetch('https://newsapi.org/v2/everything?q="Business"&apiKey=c344e5ff138541a2915af354552729e1')
 
         .then(d => d.json())
         .then(response => {
 
-            let limit2 = response.articles.splice(0, 20)
-            console.log(limit2)
+            let limit2 = response.articles.splice(0, 15)
+            // console.log(limit2)
             for (var i = 0; i <= limit2.length - 1; i++) {
-                console.log(limit2.title)
+                // console.log(limit2.title)
 
                 let show = document.getElementById("showing3");
 
@@ -102,11 +120,11 @@ async function GetBusiNews() {
             </div>
         </div>
         `
-        }
-        catch(err){
-            console.log(err)
-        }
-    }
+                }
+                catch (err) {
+                    // console.log(err)
+                }
+            }
 
         })
 }
