@@ -19,7 +19,6 @@ searchBar()
 async function GetSports() {
 
     await fetch('https://newsapi.org/v2/everything?q="sports"&apiKey=c344e5ff138541a2915af354552729e1')
-    await fetch('https://newsapi.org/v2/everything?q="sports"&apiKey=c344e5ff138541a2915af354552729e1')
 
         .then(d => d.json())
         .then(response => {
@@ -72,21 +71,17 @@ async function GetTech() {
 
                 try {
                     show.innerHTML += `
-
-        <div class="card">
-        try {
-        show.innerHTML += `
-        <div class="card mt-3">
-            <div class="card-body">
-            <img src=${response.articles[i].urlToImage} class="images">
-            <h2>${response.articles[i].title}</h2>
-            <h3>${response.articles[i].author}</h3>
-            <p>${response.articles[i].description}</p>
-            <p>${response.articles[i].publishedAt}</p>
-            <a href=${response.articles[i].url}>Read more</a>
-            </div>
-        </div>
-        `
+                    <div class="card">
+                    <div class="card-body">
+                    <img src=${response.articles[i].urlToImage} class="images">
+                    <h2>${response.articles[i].title}</h2>
+                    <h3>${response.articles[i].author}</h3>
+                    <p>${response.articles[i].description}</p>
+                    <p>${response.articles[i].publishedAt}</p>
+                    <a href=${response.articles[i].url}>Read more</a>   
+                    </div>
+                </div>
+                    `
                 }
                 catch (err) {
                     // console.log(err)
