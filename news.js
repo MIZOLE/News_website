@@ -59,7 +59,6 @@ GetSports()
 async function GetTech() {
 
     await fetch('https://newsapi.org/v2/everything?q="tech"&apiKey=c344e5ff138541a2915af354552729e1')
-    await fetch('https://newsapi.org/v2/everything?q="tech"&apiKey=c344e5ff138541a2915af354552729e1')
 
         .then(d => d.json())
         .then(response => {
