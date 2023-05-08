@@ -18,12 +18,12 @@
 
 function GetSports() {
 
-        fetch('https://newsapi.org/v2/everything?q="sports"&apiKey=c344e5ff138541a2915af354552729e1')
+        fetch('https://newsapi.org/v2/everything?q="sports"&apiKey=c576a28e1bc04f4d833ee6a71d8b4b6c')
 
         .then(d => d.json())
         .then(response => {
-
-            let limit = response.articles.splice(0, 20)
+            console.log(response)
+            let limit = response.articles.slice(0, 20)
             // console.log(limit)
             for (var i = 0; i <= limit.length - 1; i++) {
                 // console.log(limit.title)
@@ -33,7 +33,6 @@ function GetSports() {
                 try {
                     show.innerHTML += `
 
-        
             <div class="card mt-3">
             <div class="card-body">
             <img src=${response.articles[i].urlToImage} class="images">
@@ -57,12 +56,12 @@ GetSports()
 
  function GetTech() {
 
- fetch('https://newsapi.org/v2/everything?q="tech"&apiKey=c344e5ff138541a2915af354552729e1')
+ fetch('https://newsapi.org/v2/everything?q="tech"&apiKey=c576a28e1bc04f4d833ee6a71d8b4b6c')
 
         .then(d => d.json())
         .then(response => {
 
-            let limit1 = response.articles.splice(0, 15)
+            let limit1 = response.articles.slice(0, 15)
             console.log(limit1)
             console.log(response)
 
@@ -97,12 +96,12 @@ GetTech()
 
 function GetBusiNews() {
 
-    fetch('https://newsapi.org/v2/everything?q="Business"&apiKey=c344e5ff138541a2915af354552729e1')
+    fetch('https://newsapi.org/v2/everything?q="Business"&apiKey=c576a28e1bc04f4d833ee6a71d8b4b6c')
 
         .then(d => d.json())
         .then(response => {
-
-            let limit2 = response.articles.splice(0, 20)
+            console.log(response)
+            let limit2 = response.articles.slice(0, 20)
             // console.log(limit2)
             for (var i = 0; i <= limit2.length - 1; i++) {
                 // console.log(limit2.title)
