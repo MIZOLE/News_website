@@ -99,7 +99,7 @@ function GetBusiNews() {
         .then(d => d.json())
         .then(response => {
 
-            let limit2 = response.articles.splice(0, 15)
+            let limit2 = response.articles.splice(0, 20)
             // console.log(limit2)
             for (var i = 0; i <= limit2.length - 1; i++) {
                 // console.log(limit2.title)
