@@ -1,19 +1,19 @@
-function searchBar(query) {
-    searchUrl = `https://newsapi.org/v2/everything?q=${query}&apiKey=c344e5ff138541a2915af354552729e1`
+// function searchBar(query) {
+//     searchUrl = `https://newsapi.org/v2/everything?q=${query}&apiKey=c344e5ff138541a2915af354552729e1`
     
-    fetch(searchUrl)
-        .then(res => res.json())
-        .then((jsondata) => {
-            console.log(jsondata)
-        })
-    window.onload = () => {
-        let searchFieldElement = document.getElementById("searching");
-        searchFieldElement.onkeyup = (event) => {
-            searchBar(searchFieldElement.value)
-        }
-    }
-}
-searchBar()
+//     fetch(searchUrl)
+//         .then(res => res.json())
+//         .then((jsondata) => {
+//             console.log(jsondata)
+//         })
+//     window.onload = () => {
+//         let searchFieldElement = document.getElementById("searching");
+//         searchFieldElement.onkeyup = (event) => {
+//             searchBar(searchFieldElement.value)
+//         }
+//     }
+// }
+// searchBar()
 
 
 async function GetSports() {
