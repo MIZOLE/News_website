@@ -16,14 +16,14 @@
 // searchBar()
 
 
-async function GetSports() {
+function GetSports() {
 
-    await fetch('https://newsapi.org/v2/everything?q="sports"&apiKey=c344e5ff138541a2915af354552729e1')
+        fetch('https://newsapi.org/v2/everything?q="sports"&apiKey=c344e5ff138541a2915af354552729e1')
 
         .then(d => d.json())
         .then(response => {
 
-            let limit = response.articles.splice(0, 15)
+            let limit = response.articles.splice(0, 20)
             // console.log(limit)
             for (var i = 0; i <= limit.length - 1; i++) {
                 // console.log(limit.title)
@@ -55,9 +55,9 @@ async function GetSports() {
 }
 GetSports()
 
-async function GetTech() {
+ function GetTech() {
 
-    await fetch('https://newsapi.org/v2/everything?q="tech"&apiKey=c344e5ff138541a2915af354552729e1')
+ fetch('https://newsapi.org/v2/everything?q="tech"&apiKey=c344e5ff138541a2915af354552729e1')
 
         .then(d => d.json())
         .then(response => {
@@ -92,9 +92,9 @@ async function GetTech() {
 }
 GetTech()
 
-async function GetBusiNews() {
+function GetBusiNews() {
 
-    await fetch('https://newsapi.org/v2/everything?q="Business"&apiKey=c344e5ff138541a2915af354552729e1')
+    fetch('https://newsapi.org/v2/everything?q="Business"&apiKey=c344e5ff138541a2915af354552729e1')
 
         .then(d => d.json())
         .then(response => {
