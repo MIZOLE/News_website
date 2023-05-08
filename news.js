@@ -63,6 +63,9 @@ GetSports()
         .then(response => {
 
             let limit1 = response.articles.splice(0, 15)
+            console.log(limit1)
+            console.log(response)
+
             // console.log(limit1)
             for (var i = 0; i <= limit1.length - 1; i++) {
                 // console.log(limit1.title)
