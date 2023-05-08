@@ -111,6 +111,8 @@ async function GetBusiNews() {
 
         <div class="card">
             <div class="card-body">
+            
+
             <img src=${response.articles[i].urlToImage} class="images">
             <h2>${response.articles[i].title}</h2>
             <h3>${response.articles[i].author}</h3>
