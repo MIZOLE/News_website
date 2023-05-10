@@ -15,10 +15,17 @@
 // }
 // searchBar()
 
+let date = new Date().toJSON().slice(0, 10);
+console.log(date)
+
+document.getElementById("date").innerHTML = date
+
+
+
 
 function GetSports() {
 
-        fetch('https://newsapi.org/v2/everything?q="sports"&apiKey=c576a28e1bc04f4d833ee6a71d8b4b6c')
+        fetch('https://newsapi.org/v2/everything?q="sports"&apiKey=acf13d67f2334b1485d1ae2961fe1f92')
 
         .then(d => d.json())
         .then(response => {
@@ -56,7 +63,7 @@ GetSports()
 
  function GetTech() {
 
- fetch('https://newsapi.org/v2/everything?q="tech"&apiKey=c576a28e1bc04f4d833ee6a71d8b4b6c')
+ fetch('https://newsapi.org/v2/everything?q="tech"&apiKey=acf13d67f2334b1485d1ae2961fe1f92')
 
         .then(d => d.json())
         .then(response => {
@@ -73,7 +80,7 @@ GetSports()
 
                 try {
                     show.innerHTML += `
-                    <div class="card">
+                    <div class="card mt-3">
                     <div class="card-body">
                     <img src=${response.articles[i].urlToImage} class="images">
                     <h2>${response.articles[i].title}</h2>
@@ -96,7 +103,7 @@ GetTech()
 
 function GetBusiNews() {
 
-    fetch('https://newsapi.org/v2/everything?q="Business"&apiKey=c576a28e1bc04f4d833ee6a71d8b4b6c')
+    fetch('https://newsapi.org/v2/everything?q="business"&apiKey=acf13d67f2334b1485d1ae2961fe1f92')
 
         .then(d => d.json())
         .then(response => {
@@ -111,7 +118,7 @@ function GetBusiNews() {
                 try {
                     show.innerHTML += `
 
-        <div class="card">
+        <div class="card mt-3">
             <div class="card-body">
             
 
