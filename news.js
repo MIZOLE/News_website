@@ -15,17 +15,17 @@
 // }
 // searchBar()
 
-let date = new Date().toJSON().slice(0, 10);
-console.log(date)
+// let date = new Date().toJSON().slice(0, 10);
+// console.log(date)
 
-document.getElementById("date").innerHTML = date
+// document.getElementById("date").innerHTML = date
 
 
 
 
 function GetSports() {
 
-        fetch('https://newsapi.org/v2/everything?q="sports"&apiKey=acf13d67f2334b1485d1ae2961fe1f92')
+        fetch('https://newsapi.org/v2/everything?q="sports"&apiKey=7d881412fd464bbe97300934cfe1660a')
 
         .then(d => d.json())
         .then(response => {
@@ -63,7 +63,7 @@ GetSports()
 
  function GetTech() {
 
- fetch('https://newsapi.org/v2/everything?q="tech"&apiKey=acf13d67f2334b1485d1ae2961fe1f92')
+ fetch('https://newsapi.org/v2/everything?q="tech"&apiKey=7d881412fd464bbe97300934cfe1660a')
 
         .then(d => d.json())
         .then(response => {
@@ -103,7 +103,7 @@ GetTech()
 
 function GetBusiNews() {
 
-    fetch('https://newsapi.org/v2/everything?q="business"&apiKey=acf13d67f2334b1485d1ae2961fe1f92')
+    fetch('https://newsapi.org/v2/everything?q="business"&apiKey=7d881412fd464bbe97300934cfe1660a')
 
         .then(d => d.json())
         .then(response => {
